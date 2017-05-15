@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flexbox column</title>
+		<link rel='stylesheet' href='base.css'>
+		<style type='text/css'>
+			.col {
+				display: flex;
+				background: tomato;
+				padding: 1em;
+			}
+			.col {
+				flex-direction: column;
+			}
+			.col > div {
+				background: yellow;
+				padding: 1em;
+				border: 1px solid blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<center>Flex box column</center>
+		</h1>
+		<div class='col'>
+			<div>First</div>
+			<div>Second</div>
+			<div>Third</div>
+			<div>Fourth</div>
+			<div>Fifth</div>
+		</div>
+	</body>
+</html>
