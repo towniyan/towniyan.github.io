@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Flexbox column</title>
+		<title>Flexbox Column</title>
 		<link rel='stylesheet' href='base.css'>
 		<style type='text/css'>
-			.col {
-				display: flex;
-				background: tomato;
-				padding: 1em;
-			}
-			.col {
-				flex-direction: column;
-			}
 			.col > div {
-				background: yellow;
-				padding: 1em;
-				border: 1px solid blue;
+				margin-bottom: 0.5em;
 			}
 		</style>
 	</head>
 	<body>
 		<h1>
-			<center>Flex box column</center>
+			<center>Flexbox column</center>
 		</h1>
-		<div class='col'>
+		<div class='box'>
+			You can set the CSS rule <code>flex-direction: column;</code> in the flexbox container to put all its items in a column.
+			<br/>
+			Here, you can see all the items arranged inside a single column.
+		</div>
+		<div class='container col'>
 			<div>First</div>
 			<div>Second</div>
 			<div>Third</div>

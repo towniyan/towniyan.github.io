@@ -4,14 +4,6 @@
 		<title>Flexbox Intro</title>
 		<link rel='stylesheet' href='base.css'>
 		<style type='text/css'>
-			body > div {
-				padding: 1em 8em 0.5em 8em;
-			}
-			div.box {
-				background: #F5F5F5;
-				line-height: 1.5em;
-			}
-
 			div.box > p:nth-child(2) {
 				margin: 0em;
 			}
@@ -19,29 +11,11 @@
 			ul {
 				margin: 0em;
 			}
-
-			.container {
-				display: flex;
-				background: lightblue;
-			}
-			.container > div {
-				padding: 1em;
-				background: #F5F5F5;
-				border: 1px solid gray;
-				margin-right: 0.5em;
-			}
-
-			span.blue {
-				color: #0061ff;
-			}
-			span.gray {
-				color: gray;
-			}
 		</style>
 	</head>
 	<body>
 		<h1>
-			<center>Flexbox Intro</center>
+			<center>Flexbox intro</center>
 		</h1>
 
 		<div class='box'>
@@ -53,7 +27,7 @@
 			</p>
 			<ul>
 				<li>You have a flexbox container.</li>
-				<li>The children in the flexbox container are known as flexbox items.</li>
+				<li>The immediate children in the flexbox container are known as flexbox items.</li>
 			</ul>
 			<br>
 			Here's take a look at the example below:
@@ -71,6 +45,12 @@
 			The <b><span class='blue'>blue box</span></b> is the flexbox container and the light gray boxes are all flexbox items.
 			<br/>
 			The <b><span class='gray'>gray boxes</span></b> are automatically interpreted as flexbox items as they are directly inside the flexbox container.
+			<p>
+				Set the CSS rule <code>display: flex;</code> to an HTML element to make it a flexbox container.
+			</p>
+			<p>
+				Now that you know the very basics, let's move over to do some cool stuff!
+			</p>
 		</div>
 	</body>
 </html>

@@ -3,25 +3,19 @@
 	<head>
 		<title>Flexbox Row</title>
 		<link rel='stylesheet' href='base.css'>
-		<style type='text/css'>
-			.row {
-				display: flex;
-				background: tomato;
-				padding: 1em;
-			}
-
-			.row > div {
-				background: yellow;
-				padding: 1em;
-				border: 1px solid blue;
-			}
-		</style>
 	</head>
 	<body>
 		<h1>
-			<center>Flex box row</center>
+			<center>Flexbox row</center>
 		</h1>
-		<div class='row'>
+		<div class='box'>
+			You can set the CSS rule <code>flex-direction: row;</code> in the flexbox container to put all its items in a row.
+			<br/>
+			Here, you can see all the items arranged inside a single row.
+			<br/>
+			By default, all flexbox items are arranged and made to fit in a single row. So, using that rule isn't necessary.
+		</div>
+		<div class='container'>
 			<div>First</div>
 			<div>Second</div>
 			<div>Third</div>

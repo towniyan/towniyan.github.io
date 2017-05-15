@@ -3,3 +3,33 @@ body {
 	margin: 0px;
 	font-family: "open sans", sans-serif;
 }
+
+body > div {
+	padding: 1em 8em 1em 8em;
+}
+div.box {
+	background: #F5F5F5;
+	line-height: 1.7em;
+}
+
+.container {
+	display: flex;
+	background: lightblue;
+}
+.container > div {
+	padding: 1em;
+	background: #F5F5F5;
+	border: 1px solid gray;
+	margin-right: 0.5em;
+}
+
+span.blue {
+	color: #0061ff;
+}
+span.gray {
+	color: gray;
+}
+
+.col {
+	flex-direction: column;
+}
