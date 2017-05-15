@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Flexbox application</title>
+		<link rel='stylesheet' href='base.css'>
+		<style type='text/css'>
+			.phase2 {
+				list-style: none;
+			}
+			.phase3 {
+				padding: 0px;
+			}
+			.phase4 {
+				display: flex;
+			}
+			.phase5 {
+				background: #4286f4;
+			}
+			.phase6 {
+				padding: 1em;
+			}
+			.phase7 > li {
+				background: #F0F0F0;
+				padding: 0.5em;
+			}
+			.phase8 > li {
+				margin-right: 0.3em;
+			}
+			.phase9 > li {
+				border-radius: 3px;
+			}
+
+			.phase5, .phase6, .phase7, .phase8, .phase9 {
+				margin: 0em;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<center>Flexbox application</center>
+		</h1>
+
+		<div class='box'>
+			As mentioned earlier, flexbox relies on the concepts of rows and columns for laying out your site.
+			<br/>
+			Why not create a simple menubar?
+			<br/>
+			Let's start off with a simple unordered list with few list items.
+			<code>
+			<pre>&#x3C;ul&#x3E;
+&#09;&#x3C;li&#x3E;Home&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;Blog&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;Downloads&#x3C;/li&#x3E;
+	&#x3C;li&#x3E;About&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</pre>
+			</code>
+		</div>
+		<div class='phase'>
+			<ul>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			Let's remove the bullet points from the list by adding the CSS rule <code>list-style: none;</code> to the <code>ul</code>.
+		</div>
+		<div class='phase'>
+			<ul class='phase2'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			Now remove the spacing on the left side by adding <code>padding: 0px;</code>.
+			<br/>
+			This essentially removes the padding from the <code>ul</code>
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			It's nice to have the items placed horizontally in a single row.
+			<br/>
+			And voilà! Flexbox is here to arrange the list items (<code>li</code>) into a single row.
+			<br/>
+			Let's add <code>display: flex;</code> to <code>ul</code> to turn it into a flexbox container.
+			<br/>
+			And when that's done, the html elements inside it, all the list items (<code>li</code>) in this case, will become flexbox items automatically.
+			<br/>
+			Then we can control the behavior of the items and put them in a single row or column.
+			<br/>
+			However, by default, flexbox items are arranged into a single row. Like this:
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			Let's add background color to the menu.
+			<br/>
+			To do this, add <code>background: #4286f4;</code> to the <code>ul</code>.
+			<br/>
+			The color can be anything you desire. I picked a nice variant of blue.
+			<br/>
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4 phase5'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			Maybe some padding would be cool!
+			Add <code>padding: 1em;</code> to the <code>ul</code>.
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4 phase5 phase6'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			How about boxifying the list items?
+			<br/>
+			Simply set the CSS rules:
+			<br/>
+			<code>
+				background: #F0F0F0;<br/>
+				padding: 0.5em;<br/>
+			</code>
+			to the <code>li</code> in the <code>ul</code>.
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4 phase5 phase6 phase7'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			A little space around the boxed menu items wouldn't be bad.
+			<br/>
+			Add <code>margin-right: 0.3em;</code> to the <code>li</code> in <code>ul</code>.
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4 phase5 phase6 phase7 phase8'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			Maybe some roundness to the edges?
+			<br/>
+			Applying <code>border-radius: 3px;</code> to the <code>li</code> in <code>ul</code> would do the job.
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4 phase5 phase6 phase7 phase8 phase9'>
+				<li>Home</li>
+				<li>Blog</li>
+				<li>Downloads</li>
+				<li>About</li>
+			</ul>
+		</div>
+	</body>
+</html>
