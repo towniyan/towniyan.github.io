@@ -46,7 +46,7 @@
 			<br/>
 			Why not create a simple menubar?
 			<br/>
-			Let's start off with a simple unordered list with few list items.
+			Let's start off with a simple unordered list with few list items:
 			
 			<pre class="line-numbers"><code class="language-html">&#x3C;ul&#x3E;
 &#09;&#x3C;li&#x3E;Home&#x3C;/li&#x3E;
@@ -65,7 +65,7 @@
 			</ul>
 		</div>
 		<div class='box'>
-			Let's remove the bullet points from the list by adding the CSS rule to the <code>ul</code>.
+			Let's remove the bullet points from the list by adding the CSS rule to the <code>ul</code>:
 			<pre class='language-css'><code>list-style: none;</code></pre>
 		</div>
 		<div class='phase'>
@@ -77,7 +77,7 @@
 			</ul>
 		</div>
 		<div class='box'>
-			Now remove the spacing on the left side by adding the CSS rule to the <code>ul</code>.
+			Now remove the spacing on the left side by adding the CSS rule to the <code>ul</code>:
 			<pre class='language-css'><code>padding: 0px;</code></pre>
 		</div>
 		<div class='phase'>
@@ -89,12 +89,12 @@
 			</ul>
 		</div>
 		<div class='box'>
-			It's nice to have the items placed horizontally in a single row.
+			Wouldn't it be nice to have the items placed horizontally in a single row?
 			<br/>
-			And voil&#xE0;! Flexbox is here to arrange the list items (<code>li</code>) into a single row.
+			Voil&#xE0;! Flexbox is here to arrange the list items (<code>li</code>) into a single row.
 			<br/>
 			<br/>
-			Let's add the CSS rule to the <code>ul</code> to turn it into a flexbox container.
+			Let's add the CSS rule to the <code>ul</code> to turn it into a flexbox container:
 			<pre class='language-css'><code>display: flex;</code></pre>
 			<br/>
 			And when that's done, the html elements inside it, all the list items (<code>li</code>) in this case, will become flexbox items automatically.
@@ -114,7 +114,7 @@
 		<div class='box'>
 			Let's add background color to the menu.
 			<br/>
-			To do this, add the CSS rule to the <code>ul</code>.
+			To do this, add the CSS rule to the <code>ul</code>:
 			<pre class='language-css'><code>background: #4286f4;</code></pre>
 			The color can be anything you desire. I picked a nice variant of blue.
 			<br/>
@@ -129,7 +129,7 @@
 		</div>
 		<div class='box'>
 			Maybe some padding would be cool!
-			Add the CSS rule to the <code>ul</code>.
+			Add the CSS rule to the <code>ul</code>:
 			<pre class='language-css'><code>padding: 1em;</code></pre>
 		</div>
 		<div class='phase'>
@@ -143,7 +143,7 @@
 		<div class='box'>
 			How about boxifying the list items?
 			<br/>
-			Simply set the CSS rules to the <code>li</code> in the <code>ul</code>.
+			Simply set the CSS rules to the <code>li</code> in the <code>ul</code>:
 			<pre class='language-css line-numbers'><code>background: #F0F0F0;
 padding: 0.5em;</code></pre>
 		</div>
@@ -158,7 +158,7 @@ padding: 0.5em;</code></pre>
 		<div class='box'>
 			A little space to the right side of each menu item wouldn't be bad.
 			<br/>
-			Add the CSS rule to the <code>li</code> in <code>ul</code>.
+			Add the CSS rule to the <code>li</code> in <code>ul</code>:
 			<pre class='language-css'><code>margin-right: 0.3em;</code></pre>
 		</div>
 		<div class='phase'>
@@ -172,7 +172,7 @@ padding: 0.5em;</code></pre>
 		<div class='box'>
 			Maybe some roundness to the edges?
 			<br/>
-			Applying the CSS rule to the <code>li</code> in <code>ul</code> would do the job.
+			Applying the CSS rule to the <code>li</code> in <code>ul</code> would do the job:
 			<pre class='language-css'><code>border-radius: 3px;</code></pre>
 		</div>
 		<div class='phase'>
@@ -181,6 +181,41 @@ padding: 0.5em;</code></pre>
 				<li>Blog</li>
 				<li>Downloads</li>
 				<li>About</li>
+			</ul>
+		</div>
+		<div class='box'>
+			You can add anchor tags in the <code>li</code> to turn the menu items into links.
+			<br/>
+			The HTML code would look something like this:
+			<pre class='line-numbers language-html'><code>&#x3C;ul&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;a href=&#x27;#&#x27;&#x3E;Home&#x3C;/a&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;a href=&#x27;#&#x27;&#x3E;Blog&#x3C;/a&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;a href=&#x27;#&#x27;&#x3E;Downloads&#x3C;/a&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x9;&#x3C;li&#x3E;
+&#x9;&#x9;&#x3C;a href=&#x27;#&#x27;&#x3E;About&#x3C;/a&#x3E;
+&#x9;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+		</div>
+		<div class='phase'>
+			<ul class='phase2 phase3 phase4 phase5 phase6 phase7 phase8 phase9'>
+				<li>
+					<a href='#'>Home</a>
+				</li>
+				<li>
+					<a href='#'>Blog</a>
+				</li>
+				<li>
+					<a href='#'>Downloads</a>
+				</li>
+				<li>
+					<a href='#'>About</a>
+				</li>
 			</ul>
 		</div>
 		<script src="prism2.js"></script>

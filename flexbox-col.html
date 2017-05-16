@@ -3,6 +3,7 @@
 	<head>
 		<title>Flexbox Column</title>
 		<link rel='stylesheet' href='base.css'>
+		<link href="prism2.css" rel="stylesheet">
 		<style type='text/css'>
 			.col > div {
 				margin-bottom: 0.5em;
@@ -14,8 +15,8 @@
 			<center>Flexbox column</center>
 		</h1>
 		<div class='box'>
-			You can set the CSS rule <code>flex-direction: column;</code> in the flexbox container to put all its items in a column.
-			<br/>
+			You can set the CSS rule in the flexbox container to put all its items in a column:
+			<pre class='language-css'><code>flex-direction: column;</code></pre>
 			Here, you can see all the items arranged inside a single column.
 		</div>
 		<div class='container col'>
@@ -25,5 +26,7 @@
 			<div>Fourth</div>
 			<div>Fifth</div>
 		</div>
+
+		<script src="prism2.js"></script>
 	</body>
 </html>

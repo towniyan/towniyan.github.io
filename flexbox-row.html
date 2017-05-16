@@ -3,17 +3,16 @@
 	<head>
 		<title>Flexbox Row</title>
 		<link rel='stylesheet' href='base.css'>
+		<link href="prism2.css" rel="stylesheet">
 	</head>
 	<body>
 		<h1>
 			<center>Flexbox row</center>
 		</h1>
 		<div class='box'>
-			You can set the CSS rule <code>flex-direction: row;</code> in the flexbox container to put all its items in a row.
-			<br/>
+			You can set the CSS rule in the flexbox container to put all its items in a row:
+			<pre class='language-css'><code>flex-direction: row;</code></pre>
 			Here, you can see all the items arranged inside a single row.
-			<br/>
-			By default, all flexbox items are arranged and made to fit in a single row. So, using that rule isn't necessary.
 		</div>
 		<div class='container'>
 			<div>First</div>
@@ -22,5 +21,10 @@
 			<div>Fourth</div>
 			<div>Fifth</div>
 		</div>
+		<div class='box'>
+			By default, all flexbox items are arranged and made to fit in a single row. So, using that rule isn't necessary.
+		</div>
+
+		<script src="prism2.js"></script>
 	</body>
 </html>
