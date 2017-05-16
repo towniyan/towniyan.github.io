@@ -7,7 +7,7 @@ body {
 body > div {
 	padding: 1em 8em 1em 8em;
 }
-div.box {
+.box {
 	background: #F5F5F5;
 	line-height: 1.7em;
 }

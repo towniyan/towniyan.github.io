@@ -3,6 +3,7 @@
 	<head>
 		<title>Flexbox application</title>
 		<link rel='stylesheet' href='base.css'>
+		<link href="prism2.css" rel="stylesheet">
 		<style type='text/css'>
 			.phase2 {
 				list-style: none;
@@ -46,14 +47,14 @@
 			Why not create a simple menubar?
 			<br/>
 			Let's start off with a simple unordered list with few list items.
-			<code>
-			<pre>&#x3C;ul&#x3E;
+			
+			<pre class="line-numbers"><code class="language-html">&#x3C;ul&#x3E;
 &#09;&#x3C;li&#x3E;Home&#x3C;/li&#x3E;
 	&#x3C;li&#x3E;Blog&#x3C;/li&#x3E;
 	&#x3C;li&#x3E;Downloads&#x3C;/li&#x3E;
 	&#x3C;li&#x3E;About&#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;</pre>
-			</code>
+&#x3C;/ul&#x3E;</code></pre>
+			
 		</div>
 		<div class='phase'>
 			<ul>
@@ -64,7 +65,8 @@
 			</ul>
 		</div>
 		<div class='box'>
-			Let's remove the bullet points from the list by adding the CSS rule <code>list-style: none;</code> to the <code>ul</code>.
+			Let's remove the bullet points from the list by adding the CSS rule to the <code>ul</code>.
+			<pre class='language-css'><code>list-style: none;</code></pre>
 		</div>
 		<div class='phase'>
 			<ul class='phase2'>
@@ -75,9 +77,8 @@
 			</ul>
 		</div>
 		<div class='box'>
-			Now remove the spacing on the left side by adding <code>padding: 0px;</code>.
-			<br/>
-			This essentially removes the padding from the <code>ul</code>
+			Now remove the spacing on the left side by adding the CSS rule to the <code>ul</code>.
+			<pre class='language-css'><code>padding: 0px;</code></pre>
 		</div>
 		<div class='phase'>
 			<ul class='phase2 phase3'>
@@ -90,15 +91,17 @@
 		<div class='box'>
 			It's nice to have the items placed horizontally in a single row.
 			<br/>
-			And voilà! Flexbox is here to arrange the list items (<code>li</code>) into a single row.
+			And voil&#xE0;! Flexbox is here to arrange the list items (<code>li</code>) into a single row.
 			<br/>
-			Let's add <code>display: flex;</code> to <code>ul</code> to turn it into a flexbox container.
+			<br/>
+			Let's add the CSS rule to the <code>ul</code> to turn it into a flexbox container.
+			<pre class='language-css'><code>display: flex;</code></pre>
 			<br/>
 			And when that's done, the html elements inside it, all the list items (<code>li</code>) in this case, will become flexbox items automatically.
 			<br/>
 			Then we can control the behavior of the items and put them in a single row or column.
 			<br/>
-			However, by default, flexbox items are arranged into a single row. Like this:
+			However, by default, flexbox items are packed inside a single row. Like this:
 		</div>
 		<div class='phase'>
 			<ul class='phase2 phase3 phase4'>
@@ -111,8 +114,8 @@
 		<div class='box'>
 			Let's add background color to the menu.
 			<br/>
-			To do this, add <code>background: #4286f4;</code> to the <code>ul</code>.
-			<br/>
+			To do this, add the CSS rule to the <code>ul</code>.
+			<pre class='language-css'><code>background: #4286f4;</code></pre>
 			The color can be anything you desire. I picked a nice variant of blue.
 			<br/>
 		</div>
@@ -126,7 +129,8 @@
 		</div>
 		<div class='box'>
 			Maybe some padding would be cool!
-			Add <code>padding: 1em;</code> to the <code>ul</code>.
+			Add the CSS rule to the <code>ul</code>.
+			<pre class='language-css'><code>padding: 1em;</code></pre>
 		</div>
 		<div class='phase'>
 			<ul class='phase2 phase3 phase4 phase5 phase6'>
@@ -139,13 +143,9 @@
 		<div class='box'>
 			How about boxifying the list items?
 			<br/>
-			Simply set the CSS rules:
-			<br/>
-			<code>
-				background: #F0F0F0;<br/>
-				padding: 0.5em;<br/>
-			</code>
-			to the <code>li</code> in the <code>ul</code>.
+			Simply set the CSS rules to the <code>li</code> in the <code>ul</code>.
+			<pre class='language-css line-numbers'><code>background: #F0F0F0;
+padding: 0.5em;</code></pre>
 		</div>
 		<div class='phase'>
 			<ul class='phase2 phase3 phase4 phase5 phase6 phase7'>
@@ -156,9 +156,10 @@
 			</ul>
 		</div>
 		<div class='box'>
-			A little space around the boxed menu items wouldn't be bad.
+			A little space to the right side of each menu item wouldn't be bad.
 			<br/>
-			Add <code>margin-right: 0.3em;</code> to the <code>li</code> in <code>ul</code>.
+			Add the CSS rule to the <code>li</code> in <code>ul</code>.
+			<pre class='language-css'><code>margin-right: 0.3em;</code></pre>
 		</div>
 		<div class='phase'>
 			<ul class='phase2 phase3 phase4 phase5 phase6 phase7 phase8'>
@@ -171,7 +172,8 @@
 		<div class='box'>
 			Maybe some roundness to the edges?
 			<br/>
-			Applying <code>border-radius: 3px;</code> to the <code>li</code> in <code>ul</code> would do the job.
+			Applying the CSS rule to the <code>li</code> in <code>ul</code> would do the job.
+			<pre class='language-css'><code>border-radius: 3px;</code></pre>
 		</div>
 		<div class='phase'>
 			<ul class='phase2 phase3 phase4 phase5 phase6 phase7 phase8 phase9'>
@@ -181,5 +183,6 @@
 				<li>About</li>
 			</ul>
 		</div>
+		<script src="prism2.js"></script>
 	</body>
 </html>

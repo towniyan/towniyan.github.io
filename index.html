@@ -3,6 +3,18 @@
 	<head>
 		<title>Flexbox Intro</title>
 		<link rel='stylesheet' href='base.css'>
+		<style type='text/css'>
+			ol a {
+				color: #333;
+				text-decoration: none;
+			}
+			ol a li {
+				display: inline;
+				background: lightblue;
+				padding: 0.5em;
+				border-radius: 3px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>
@@ -10,8 +22,14 @@
 		</h1>
 
 		<div class='box'>
+			<h3>HTML and CSS</h3>
+			<ol>
+				<a href='html-basics.html'>
+					<li>Basics</li>
+				</a>
+			</ol>
 			<h3>Flexbox</h3>
-			<ul>
+			<ol>
 				<a href='flexbox-intro.html'>
 					<li>Intro</li>
 				</a>
@@ -24,7 +42,7 @@
 				<a href='flexbox-application.html'>
 					<li>Application</li>
 				</a>
-			</ul>
+			</ol>
 		</div>
 	</body>
 </html>

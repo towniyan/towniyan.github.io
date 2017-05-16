@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML basics</title>
+		<link rel='stylesheet' href='base.css'>
+		<link href="prism2.css" rel="stylesheet">
+		<style type='text/css'>
+			.phase2 {
+				text-decoration: none;
+			}
+			.phase3 {
+				color: #333;
+			}
+			.phase4 {
+				background: lightblue;
+			}
+			.phase5 {
+				padding: 0.3em 1em 0.3em 1em;
+			}
+			.phase6 {
+				border-radius: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<center>HTML basics</center>
+		</h1>
+		<div class='box'>
+			Here we got a simple link:
+		</div>
+		<div>
+			<a href='http://google.com'>Visit Google</a>
+		</div>
+		<div class='box'>
+			Here's the HTML for it:
+
+			<pre class='language-html'><code>&#x3C;a href=&#x27;http://google.com&#x27;&#x3E;Visit Google&#x3C;/a&#x3E;</code></pre>
+			<br/>
+			Let's remove the underline using the CSS code:
+
+			<pre class='language-css'><code>text-decoration: none;</code></pre>
+		</div>
+		<div>
+			<a href='http://google.com' class='phase2'>Visit Google</a>
+		</div>
+		<div class='box'>
+			Let's change the color using the CSS rule:
+			<pre class='language-css'><code>color: #333;</code></pre>
+		</div>
+		<div>
+			<a href='http://google.com' class='phase2 phase3'>Visit Google</a>
+		</div>
+		<div class='box'>
+			Let's set a background color!
+			<pre class='language-css'><code>background: lightblue;</code></pre>
+		</div>
+		<div>
+			<a href='http://google.com' class='phase2 phase3 phase4'>Visit Google</a>
+		</div>
+		<div class='box'>
+			Give some breathing space.
+			<br/>
+			Let's add some padding to increase the space inside it.
+			<pre class='language-css'><code>padding: 0.3em 1em 0.3em 1em;</code></pre>
+			This CSS code sets top and bottom padding to 0.3em
+			<br/>
+			and left and right padding to 1em.
+		</div>
+		<div>
+			<a href='http://google.com' class='phase2 phase3 phase4 phase5'>Visit Google</a>
+		</div>
+		<div class='box'>
+			A little roundness wouldn't be bad, eh?
+			<pre class='language-css'><code>border-radius: 3px;</code></pre>
+		</div>
+		<div>
+			<a href='http://google.com' class='phase2 phase3 phase4 phase5 phase6'>Visit Google</a>
+		</div>
+
+		<script src="prism2.js"></script>
+	</body>
+</html>
