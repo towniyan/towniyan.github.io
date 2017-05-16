@@ -18,12 +18,14 @@ body > div {
 	display: flex;
 	background: lightblue;
 	padding: 1em;
+	border-radius: 3px;
 }
 .container > div {
 	padding: 0.5em 1em 0.5em 1em;
 	background: #F5F5F5;
 	border: 1px solid gray;
 	margin-right: 0.5em;
+	border-radius: 3px;
 }
 
 span.blue {
