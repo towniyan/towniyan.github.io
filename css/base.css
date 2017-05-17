@@ -38,3 +38,20 @@ span.gray {
 .col {
 	flex-direction: column;
 }
+
+nav.main-menu {
+	padding: 1em 1em 1em 1em;
+	background: #555;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+}
+nav.main-menu a {
+	padding: 0.5em;
+	color: #666;
+	text-decoration: none;
+	background: #f0f0f0;
+	border-radius: 3px;
+	font-size: 0.95em;
+	margin-right: 0.3em;
+}
