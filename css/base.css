@@ -55,3 +55,6 @@ nav.main-menu a {
 	font-size: 0.95em;
 	margin-right: 0.3em;
 }
+nav.main-menu a.selected {
+	color: #4286f4;
+}
