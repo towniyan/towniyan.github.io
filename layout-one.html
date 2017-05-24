@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><title>Layout one</title><link href="css/prism2.css" rel="stylesheet"><style type="text/css">body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial;
+	font-size: 0.9rem;
+	background: rgb(233, 235, 238);
+}
+#main-menu {
+	display: flex;
+	background: rgb(60, 90, 150);
+	padding: 1em 3em 1em 3em;
+}
+#main-menu a {
+	color: white;
+	margin-right: 2em;
+	text-decoration: none;
+}
+
+#content {
+	padding: 1em 3em 0em 3em;
+	display: flex;
+}
+#sidebar-left {
+	flex-grow: 0.3;
+	display: flex;
+	flex-direction: column;
+}
+#sidebar-left a {
+	margin-bottom: 0.5em;
+	color: #666;
+	text-decoration: none;
+	padding: 5px;
+	border: 1px solid rgb(233, 235, 238);
+}
+#sidebar-left a:hover {
+	background: rgb(240, 240, 240);
+	border: 1px solid lightgray;
+}
+
+#midbar {
+	flex-grow: 1.6;
+}
+.box {
+	padding: 1em;
+	background: white;
+	border-radius: 3px;
+	border: 1px solid lightgray;
+	margin: 0px 1em 0.8em 1em;
+}
+
+#sidebar-right {
+	flex-grow: 1.2;
+}</style></head><body><nav id="main-menu"><a href="">Home</a><a href="">Tutorials</a><a href="">About me</a></nav><div id="content"><div id="sidebar-left"><a href="">Lorem Ipsum</a><a href="">Lorem Ipsum</a><a href="">Lorem Ipsum</a><a href="">Lorem Ipsum</a><a href="">Lorem Ipsum</a><a href="">Lorem Ipsum</a><a href="">Lorem Ipsum</a></div><div id="midbar"><div class="box"></div><div class="box"></div><div class="box"></div></div><div id="sidebar-right"><div class="box"></div><div class="box"></div><div class="box"></div></div></div><script src="js/prism2.js"></script></body></html>
