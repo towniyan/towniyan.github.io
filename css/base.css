@@ -28,10 +28,13 @@ body > div {
 	border-radius: 3px;
 }
 
-span.blue {
+.blue {
 	color: #0061ff;
 }
-span.gray {
+.orange {
+	color: #ff9000;
+}
+.gray {
 	color: gray;
 }
 
@@ -57,4 +60,10 @@ nav.main-menu a {
 }
 nav.main-menu a.selected {
 	color: #4286f4;
+}
+
+@media screen and (max-width: 700px) {
+	body > div {
+		margin: 1em;
+	}
 }

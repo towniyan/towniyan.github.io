@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><title>Linear Algebra 1.1</title><link rel="stylesheet" href="css/base.css"><link href="css/prism2.css" rel="stylesheet"><style type="text/css">p {
+	line-height: 1.7em;
+}
+ul {
+	margin: 0.5em;
+}
+.matrix {
+	border: 5px solid gray;
+	padding: 0.5em;
+	display: inline-block;
+	border-radius: 15px;
+	border-top: 0px;
+	border-bottom: 0px;
+	margin: 1em 0em 1em 0em;
+}
+.matrix > div div {
+	width: 2em;
+	height: 2em;
+	text-align: center;
+}
+.matrix > div {
+	display: flex;
+}</style></head><body><div><nav class="main-menu"><a href="index.html">Contents</a><a href="html-basics.html">HTML - Basics</a><a href="flexbox-intro.html">Flexbox - Intro</a><a href="flexbox-row.html">Flexbox - Row</a><a href="flexbox-col.html">Flexbox - Column</a><a href="flexbox-application.html">Flexbox - Application</a></nav></div><h1><center>Linear Algebra 1.1</center></h1><div><h3>Linear equations</h3></div><div><p>They are basically equations in the form:
+a<sub>1</sub>x<sub>1 </sub>+ a<sub>2</sub>x<sub>2 </sub>+ ... + a<sub>n </sub>x<sub>n </sub>= b.</p><p><b>x<sub>n </sub></b>is a variable whereas <b>a<sub>n </sub></b>is a constant (any number).</p><p>Example: 5x<sub>1 </sub>+ 15x<sub>2 </sub>+ 29x<sub>3 </sub>= 100.</p></div><div><h3>Solutions of linear equations</h3><p><b>Step 1: </b>Draw equations in a graph<br><b>Step 2: </b>Find intersection points of the equations</p><b>Step 3: </b>Judge it yourself<br><ul><li>Number of solutions = number of intersection points</li><li>Coincident lines/planes = infinite solutions</li><li>No intersection = no solution</li></ul></div><div><h3>Augmented matrix of linear equations</h3><p>Let's say we got this set of linear equations:<br>x + y + 2z = 9<br>2x + 4y - 3z = 1<br>3x + 6y - 5z = 0</p><p>Won't it be cool to put it in a matrix like this?<div class="matrix"><div><div>1</div><div>1</div><div>2</div><div class="orange">9</div></div><div><div>2</div><div>4</div><div>-3</div><div class="orange">1</div></div><div><div>3</div><div>6</div><div>-5</div><div class="orange">0</div></div></div></p><p>Don't be confused.<br>We simply put the coefficients and the constants on the right hand side of the equations in the matrix.<br>Augmented matrix makes it easier to perform operations on an equation set as it filters out the variables and unifies the equations into one.</p></div><div><h3>Solving linear equations</h3><p>We need to perform 3 different operations on an augmented matrix to make our way towards the solution of any set of linear equations:<br><ol><li>Multiply a row through by a nonzero constant.</li><li>Interchange two rows.</li><li>Add a constant times one row to another.</li></ol>These are called <b>elementary row operations </b>on a matrix.</p><p><b>Example:</b><br>If we were to solve the set of equations from the last section:<br>x + y + 2z = 9<br>2x + 4y - 3z = 1<br>3x + 6y - 5z = 0<br>We'd have an augmented matrix out of it like this:<div class="matrix"><div><div>1</div><div>1</div><div>2</div><div class="orange">9</div></div><div><div>2</div><div>4</div><div>-3</div><div class="orange">1</div></div><div><div>3</div><div>6</div><div>-5</div><div class="orange">0</div></div></div><br>Based on elementary row operations, our goal is to turn the augmented matrix into something like this:<br><div class="matrix"><div><div class="blue">a</div><div>x</div><div>x</div><div class="orange">d</div></div><div><div>0</div><div class="blue">b</div><div>x</div><div class="orange">e</div></div><div><div>0</div><div>0</div><div class="blue">c</div><div class="orange">f</div></div></div><br>The augmented matrix in this form is said to be in <b>row echelon form.</b></p><br>Here, <span class="blue">a</span>, <span class="blue">b </span>and <span class="blue">c </span>are called <b>pivot points.</b><br><b>x </b>is any number.<p>We turned the matrix into this form so we can easily solve the equations.</p>However, let's assume that we know the values:<br><div class="matrix"><div><div class="blue">1</div><div>1</div><div>2</div><div class="orange">9</div></div><div><div>0</div><div class="blue">1</div><div>-7/2</div><div class="orange">-17/2</div></div><div><div>0</div><div>0</div><div class="blue">1</div><div class="orange">3</div></div></div><br>Since, these are coefficients, we can say that:<ul><li><b>z = 3</b></li><li>y - 7/2z = -17/2<br>or y - 7/2(3) = -17/2<br>or <b>y = 2</b></li><li>x + y + 2z = 9<br>or x + 2 + 2(3) = 9<br>or x + 8 = 9<br>or <b>x = 1</b></li></ul><br>That's nice and all but how did we turn an augmented matrix into reduced row echelon form?<br>The method for doing so is called <b>Guassian elimination!</b></div><div><h3>Gaussian Elimination</h3></div><script src="js/prism2.js"></script></body></html>
