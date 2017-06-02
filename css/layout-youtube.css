@@ -1,0 +1,158 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial;
+	background: #f1f1f1;
+}
+
+body > div {
+	padding-left: 3em;
+	padding-right: 3em;
+}
+
+.row {
+	display: flex;
+}
+
+.box {
+	display: flex;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #F0F0F0;
+	background: white;
+}
+
+#main-menu .menu-item {
+	margin-right: 0.5em;
+}
+#main-menu .left {
+	justify-content: flex-start;
+	flex-grow: 1;
+	display: flex;
+}
+#main-menu .center {
+	justify-content: center;
+	flex-grow: 5;
+	display: flex;
+}
+#main-menu .right {
+	justify-content: flex-end;
+	flex-grow: 1;
+	display: flex;
+}
+
+#main-menu .sidebar-toggle {
+	background: no-repeat url(http://s.ytimg.com/yts/imgbin/www-hitchhiker-2x-vflHj_z5b.png) -232px -65px;
+	background-size: 548px 322px;
+	width: 16px;
+	height: 16px;
+}
+#main-menu .youtube-logo {
+	background: no-repeat url(http://s.ytimg.com/yts/imgbin/www-hitchhiker-2x-vflHj_z5b.png) -173px -26px;
+	background-size: 548px 322px;
+	width: 73.5px;
+	height: 30px;
+}
+
+#main-menu .search-bar {
+	flex-grow: 1;
+	display: flex;
+}
+#main-menu .search-bar input, a {
+	margin: 0px;
+}
+
+#main-menu .search-bar input[type='text'] {
+	flex-grow: 1;
+	padding: 0.3em 0.5em 0.3em 0.5em;
+	font-size: 15px;
+}
+#main-menu .search-bar a {
+	border: 1px solid #ddd;
+	background: #F0F0F0;
+	padding: 0.5em 1.5em 0.3em 1.5em;
+}
+#main-menu .search-bar .search-logo {
+	background: no-repeat url(http://s.ytimg.com/yts/imgbin/www-hitchhiker-2x-vflHj_z5b.png) -119px -137px;
+	background-size: 548px 322px;
+	width: 15px;
+	height: 15px;
+}
+
+#main-menu .upload {
+	background: no-repeat url(http://s.ytimg.com/yts/imgbin/www-hitchhiker-2x-vflHj_z5b.png) -523px -272px;
+	background-size: 548px 322px;
+	width: 24px;
+	height: 24px;
+}
+
+#main-menu .notifications {
+	background: no-repeat url(http://s.ytimg.com/yts/imgbin/www-hitchhiker-2x-vflHj_z5b.png) -267px -29px;
+	background-size: 548px 322px;
+	width: 30px;
+	height: 30px;
+}
+
+#main-menu .profile-picture {
+	border-radius: 100%;
+}
+
+#second-menu {
+	display: flex;
+	justify-content: center;
+	padding-top: 0em;
+	padding-bottom: 0em;
+}
+#second-menu a {
+	color: #666;
+	text-decoration: none;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	font-size: 14px;
+	margin-right: 1.5em;
+}
+
+#second-menu a.active {
+	border-bottom: 3px solid rgb(220, 100, 100);
+}
+
+#page {
+	padding: 1em 8em 1em 8em;
+}
+#page .section {
+	background: white;
+	border: 1px solid #f1f1f1;
+	padding: 1em;
+}
+#page .section > h4 {
+	margin: 0em 0em 0.5em 0em;
+}
+
+#page .row {
+	margin-bottom: 1em;
+}
+
+#page .item {
+	margin-right: 1em;
+	flex-grow: 1;
+}
+#page .name {
+	font-size: 13px;
+	color: #167ac6;
+	font-weight: bold;
+}
+#page .channel, .views, .age {
+	color: #666;
+	font-size: 11px;
+	margin-top: 0.3em;
+}
+
+#page .views, .age {
+	display: inline;
+	margin-right: 1em;
+}
+
+#page .item img {
+	width: 100%;
+	min-height: 110px;
+}
