@@ -1,0 +1,109 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	color: #666;
+	font-family: Arial;
+}
+
+#main-menu {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1em;
+}
+#main-menu a {
+	text-decoration: none;
+	margin-right: 1em;
+	font-size: 13px;
+}
+
+#main-menu .categories {
+	background-image: url(https://ssl.gstatic.com/gb/images/i2_2ec824b0.png);
+	background-position: -132px -38px;
+	background-size: 528px 68px;
+	width: 30px;
+	height: 30px;
+	margin-top: -5px;
+}
+#main-menu .notifications {
+	background: no-repeat url(http://s.ytimg.com/yts/imgbin/www-hitchhiker-2x-vflHj_z5b.png) -267px -29px;
+	background-size: 548px 322px;
+	width: 30px;
+	height: 30px;
+	margin-top: -2px;
+}
+
+#main-menu .profile-picture img {
+	border-radius: 100%;
+	margin-top: -2px;
+}
+
+#google-logo {
+	display: flex;
+	justify-content: center;
+	padding-top: 10em;
+}
+
+#search-box {
+	display: flex;
+	justify-content: center;
+	margin-top: 1em;
+	padding-left: 18em;
+	padding-right: 18em;
+}
+#search-box input {
+	padding: 1em;
+	flex-grow: 1;
+}
+body > center a {
+	text-decoration: none;
+}
+body > center {
+	margin-top: 2em;
+	font-size: 13px;
+}
+
+#action-panel {
+	margin-top: 2em;
+	display: flex;
+	justify-content: center;
+}
+
+#action-panel input {
+	padding: 0.7em 1em 0.7em 1em;
+	margin-right: 0.5em;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background: #F0F0F0;
+	border: 1px solid #eee;
+	color: #777;
+	border-radius: 2px;
+}
+
+#footer {
+	padding: 1em 2em 1em 2em;
+	border-top: 1px solid #ddd;
+	background: #F0F0F0;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+}
+#footer .left {
+	display: flex;
+	justify-content: flex-start;
+	flex-grow: 1;
+}
+#footer .right {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+}
+#footer a {
+	margin-right: 2em;
+	color: #666;
+	text-decoration: none;
+	font-size: 13px;
+}
