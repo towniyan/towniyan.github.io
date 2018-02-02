@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><title>C++ Pointers</title><link rel="stylesheet" href="css/base.css"><link href="css/prism3.css" rel="stylesheet"></head><body><div><nav class="main-menu"><a href="index.html">Contents</a><a href="html-basics.html">HTML - Basics</a><a href="flexbox-intro.html">Flexbox - Intro</a><a href="flexbox-row.html">Flexbox - Row</a><a href="flexbox-col.html">Flexbox - Column</a><a href="flexbox-application.html">Flexbox - Application</a><a class="selected" href="cpp-pointers.html">C++ Pointers</a></nav></div><h1><center>C++ Pointers</center></h1><div><h3>0. Introduction</h3></div><div class="box">Typically you'd like to store integers, strings, characters, floats, etc in a variable. Just like this:<pre class="language-cpp line-numbers"><code>int a;
+string b;
+char c;
+float d;</code></pre><p>But what if you want to store the memory address of an integer, string, float, etc?
+That's where pointers come in the scene.</p></div><div><h3>1. What is a pointer?</h3></div><div class="box">A pointer is basically a variable which holds a memory address. In other words, it points to a memory address.<p>Let's say you have an <b>integer </b>in <u>memory address 25.</u><br>And, you have a <b>pointer </b>which points to <u>memory address 25.</u></p></div><div><h3>2. Types of pointers</h3></div><div class="box"><p>Since the <b>pointer </b>points to a <u>memory address</u> 
+which holds an <b>integer</b>, that pointer will be known as an <b>integer pointer.</b><br>As a side note, you can also say that the <b>pointer </b>points to an <b>integer.</b></p></div><div><h3>3. From English to C++</h3></div><div class="box"><p>Coding is much easier when you think up in English and translate it to code as you type.</p><p>If you have this in your mind, "I want an <b>integer </b>named <u>a</u> 
+which will have a value of <u>5</u>."<br>This is how your code may look like:<pre class="language-cpp"><code>int a = 5;</code></pre></p><p>How about, "I want a <b>pointer </b>to the <b>integer</b>, <u>a</u> 
+, I just created."<pre class="language-cpp"><code>int* b = &a;</code></pre></p><p>Let's break down the translation!<br>During declaration, <b>pointer to the integer </b>translates to <code>int* </code>where the asterisk can be read off as "pointer."<br>Since, our <b>pointer </b>will point to <u>a</u>
+, its value will be the memory address of the <b>integer</b> <u>a</u>.<br><b>Memory addresss of the variable 'a' </b>translates to <code>&a.</code><br>The ampersand (&) simply translates to "memory address of ".</p><p>Note, we named the pointer
+ <u>b</u>. However, you could give it any name you desired.</p></div><div><h3>4. Putting it all together</h3></div><div class="box">Here's how the code may look like in C++:<pre class="language-cpp line-numbers"><code>int a = 5; // let's pretend that it's stored in memory address 25
+int* b = &a; // 'b' is an integer pointer to 'a'</code></pre><p>RECAP: During type declaration, <code>int </code>followed by an asterisk as in <code>int* </code>simply means <b>integer pointer.</b><br>You guessed it right! If you want a <b>pointer to a </b><b>float</b>, you have to declare it as <code>float* </code>which translates to 'float pointer.'</p><p>The value of the <b>integer pointer </b>(in the example above) is memory address of the <b>integer.</b><br>Ampersand followed by a variable name (<code>&a</code>) evaluates to the memory address of the variable.<br>In this case, it evaluates to
+ <u>25</u>.</p><p>If you knew the memory address you want the pointer to point to, you could also write it directly like this:<pre class="language-cpp"><code>int* b = 25;</code></pre></p></div><div><h3>5. Fiddling with pointers</h3></div><div class="box">What's the point of pointers if you can't do anything with them? It's an old joke though :P<p>We know how to translate from English to C++ during the declaration of pointers. But what about elsewhere?</p><p>"I want the contents of the memory address pointed to by my pointer!" translates to:<pre class="language-cpp"><code>*b // this evaluates to 5</code></pre>It's that simple! Here, asterisk means "dereference of ."<br>Dereference means getting whatever the pointer is pointing to.<br>Here, the pointer
+ <u>b</u> 
+points to the integer
+<u>a</u> 
+which has a value of 5.
+Dereferencing it will just get you 
+ <u>5.</u></p><p>In this case, the asterisk acted as a <b>dereference operator.</b></p></div><div><h3>6. Fiddling with pointers 2</h3></div><div class="box">A clever mind would think of doing something like this:<pre class="language-cpp"><code>*b = 124;</code></pre>And that's valid code! Here, we're basically setting a new value for the integer the pointer is pointing to.<br>Now, the integer "a" will have a value of 124 and not 5.<p>The code above is similar to this:<pre class="language-cpp"><code>a = 124;</code></pre></p><p>You guessed it right! Pointers can act like mirrors of variables.</p></div><div><h3> 7. Why do we need pointers? Part 1</h3></div><div class="box">Unless you specify otherwise, whenever you pass a variable to a function, all you're doing is making another copy of the variable and giving it to the function.<pre class="language-cpp line-numbers"><code>void increment (int b) {
+	b++;
+}
+
+int a = 5;
+increment(a);</code></pre><p>In the memory, we have a variable 
+ <u>a</u> 
+which has a value of 
+ <u>5</u>.<br>The <u>increment</u> 
+function takes an <b>integer </b>and adds 1 to it (increments it).</p><p>However, the integer <u>a</u> 
+is not changing at all!<br>It's because we have an integer <u>a</u> 
+which equals <u>5</u>. When we passed <u>a</u> 
+to the function <u>increment</u> 
+, we're not passing the variable <u>a</u> 
+but its VALUE only.<br>This is known as <b>pass by value.</b></p><p>During pass by value, here's exactly what happens:<ol><li>The function receives a value and stores that value in a new variable. Here, <u>a</u> 
+is 5. The function receives 5 and stores it in <u>b</u>.</li><li>Next, <u>b</u> 
+is incremented and equals 6.</li></ol></p><p> Summary, we have 2 variables in memory; with values of 5 and 6 respectively.</p><p>Now, this is a real problem and pointers come to the rescue. We'll look that under the next heading.</p></div><div><h3>8. Why do we need pointers? Part 2</h3></div><div class="box">The code below does exactly what we wanted and solves the problem we faced under the previous heading. All we needed to solve it was a little bit of pointers!<pre class="language-cpp line-numbers"><code>void increment (int* b) {
+	*b++; // Increments the value of a.
+}
+
+int a = 5;
+increment(&a); // Pass the memory address of 'a' to the function</code></pre>Let's look at what's going on here:<ol><li>Like before, we have an integer <u>a</u> 
+equalling 5.</li><li>But then, we passed the memory address of <u>a</u> 
+to the function.</li><li>The memory address is received by the function and stored in the integer pointer <u>b</u>.</li><li>The pointer is dereferenced to get the memory contents it is pointed to.</li><li>The memory contents are then incremented.</li><li>As a result, the integer <u>a</u> 
+now has a value of 6.</li></ol><p>Here, the pointer <u>b</u> 
+acted as a mirror of integer <u>a</u>.</p></div><script src="js/prism3.js"></script></body></html>
