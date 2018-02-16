@@ -2,42 +2,64 @@
 string b = "Hello";
 char c = 'H';
 float d = 3.14;</code></pre><p>But what if you want to store the memory address of an integer, string, float, etc?
-That's where pointers come in the scene.</p></div><div><h3>1. What is a pointer?</h3></div><div class="box">A pointer is basically a variable which holds a memory address. In other words, it points to the contents of a memory address.<p>Throughout this article, keep this in your mind:<br>We've an <b>integer </b>in <u>memory address 25.</u><br>And, you have a <b>pointer </b>which points to the contents of <u>memory address 25.</u></p></div><div><h3>2. Types of pointers</h3></div><div class="box"><p>Since the <b>pointer </b>points to a <u>memory address</u> 
-which holds an <b>integer</b>, that pointer will be known as an <b>integer pointer.</b><br>As a side note, you can also say that the <b>pointer </b>points to an <b>integer.</b></p></div><div><h3>3. From English to C++</h3></div><div class="box"><p>Coding is much easier when you think up in English and translate it to code as you type.</p><p>If you have this in your mind, "I want an <b>integer </b>named <u>a</u> 
-which will have a value of <u>5</u>."<br>This is how your code may look like:<pre class="language-cpp"><code>int a = 5;</code></pre></p><p>How about, "I want a <b>pointer </b>to the <b>integer</b>, <u>a</u> 
-, I just created."<pre class="language-cpp"><code>int* b = &a;</code></pre></p><p>Let's break down the translation!<br>During declaration, <b>pointer to the integer </b>translates to <code>int* </code>where the asterisk can be read off as "pointer."<br>Since, our <b>pointer </b>will point to <u>a</u>
-, its value will be the memory address of the <b>integer</b> <u>a</u>.<br><b>Memory addresss of the variable 'a' </b>translates to <code>&a.</code><br>The ampersand (&) simply translates to "memory address of ".</p><p>Note, we named the pointer
- <u>b</u>. However, you could give it any name you desired.</p></div><div><h3>4. Putting it all together</h3></div><div class="box">Here's how the code may look like in C++:<pre class="language-cpp line-numbers"><code>int a = 5; // let's pretend that it's stored in memory address 25
-int* b = &a; // 'b' is an integer pointer to 'a'</code></pre><p>RECAP: During type declaration, <code>int </code>followed by an asterisk as in <code>int* </code>simply means <b>integer pointer.</b><br>You guessed it right! If you want a <b>pointer to a </b><b>float</b>, you have to declare it as <code>float* </code>which translates to 'float pointer.'</p><p>The value of the <b>integer pointer </b>(in the example above) is memory address of the <b>integer.</b><br>Ampersand followed by a variable name (<code>&a</code>) evaluates to the memory address of the variable.<br>In this case, it evaluates to
- <u>25</u>.</p><p>If you knew the memory address you want the pointer to point to, you could also write it directly like this:<pre class="language-cpp"><code>int* b = 25;</code></pre></p></div><div><h3>5. Fiddling with pointers. Part 1</h3></div><div class="box">What's the point of pointers if you can't do anything with them? It's an old joke though :P<p>We know how to translate from English to C++ during the declaration of pointers. But what about elsewhere?</p><p>"I want the contents of the memory address pointed to by my pointer!" translates to:<pre class="language-cpp"><code>*b // this evaluates to 5</code></pre>It's that simple! Here, asterisk means "dereference of ."<br>Dereference means getting whatever the pointer is pointing to.<br>Here, the pointer
- <u>b</u> 
-points to the integer
-<u>a</u> 
-which has a value of 5.
-Dereferencing it will just get you 
- <u>5.</u></p><p>In this case, the asterisk acted as a <b>dereference operator.</b></p></div><div><h3>6. Fiddling with pointers. Part 2</h3></div><div class="box">A clever mind would think of doing something like this:<pre class="language-cpp"><code>*b = 124;</code></pre>And that's valid code! Here, we're basically setting a new value for the integer the pointer is pointing to.<br>Now, the integer "a" will have a value of 124 and not 5.<p>The code above is similar to this:<pre class="language-cpp"><code>a = 124;</code></pre></p><p>You guessed it right! Pointers can act like mirrors of variables.</p></div><div><h3> 7. Why do we need pointers? Part 1</h3></div><div class="box">Unless you specify otherwise, whenever you pass a variable to a function, all you're doing is making another copy of the variable and giving it to the function.<pre class="language-cpp line-numbers"><code>void increment (int b) {
-	b++;
+That's where pointers come in the scene.</p></div><div><h3>1. What is a pointer?</h3></div><div class="box">A pointer is basically a variable which holds a memory address.</div><div><h3>2a. Creating a pointer [Declaration]</h3></div><div class="box">From the definition, you know that a pointer just holds a the value of a memory address.<p>Before you create a pointer, you need to specify the type of data stored in the memory address. It's required for performing various operations on the contents of the memory address.</p><p>If the memory address of your pointer holds a float, it'll be called a "float pointer."</p><p>In this example, we'll just work with an integer pointer.</p>Example:<pre class="language-cpp"><code>int* a;</code></pre><p>Let's break it down:<ul><li><b>int*</b> 
+translates to "integer pointer."</li><li><b>a</b>
+is the name of the pointer; you can name it anything you like.</li></ul></p><p>We created an integer pointer named 'a' since we want to store the value of a memory address holding an integer.</p></div><div><h3>2b. Creating a pointer [Initialization]</h3></div><div class="box">In the previous section, we declared a pointer named 'a' but didn't assign any value to it.<p>As you should know by now, the value will be a memory address. Let's create an integer so we can use its memory address:</p><pre class="language-cpp"><code>int age = 21;
+</code></pre><p>This is how you grab its memory address:</p><pre class="language-cpp"><code>&age;</code></pre><p><b>&age</b> 
+translates to "address of age"</p><p>The ampersand (&) acts as the "address of" operator.</p><p>Alright, great! Let's set the memory address to the pointer we declared in the previous section named "a."</p><pre class="language-cpp"><code>a = &age;</code></pre><p>Congrats! We just created a pointer named "a" whose value is just the memory address of "age."</p></div><div><h3>2c. Creating a pointer [Summary]</h3></div><div class="body">Here's what the overall code may look like:<pre class="language-cpp line-numbers"><code>int age = 21;
+int* a = &age;</code></pre><p>This is all we did so far:<ul><li>Create an integer "age" with value of "21."</li><li>Create a integer pointer</li></ul></p></div><div><h3>3. Accessing contents of memory address</h3></div><div class="box">If we had code like this:<pre class="language-cpp"><code>int age = 21;
+int* a = &age;</code></pre><p>'a' holds the memory address of 'age.' In the address, we have the value '21.'</p><p>The code below is how you access memory contents:</p><pre class="language-cpp"><code>cout << *a; // prints 21</code></pre><p>The asterisk (*) here is a "dereference" operator.</p><p>A dereference operator essentially fetches the contents of a memory address.</p><p>In summary, <b>*a</b> 
+translates to "memory contents of 'a'" or "dereference of 'a'."</p></div><div><h3>4a. Practical example [Arrays] </h3></div><div class="box">In programming, an array is just like a variable but has multiple values.<p>In memory, the values are stored one after another. The memory address of the first value is kept and other values are accessed relative to the address of the first.</p><p>The code below will create an integer array of 5 elements:</p><pre class="language-cpp"><code>int a[5];</code></pre><p>5 integers will be placed side by side in the memory.</p><p>If you tried evaluating 'a,'' you'll just get the memory address of the first element in the array.</p><pre class="language-cpp"><code>cout << a; // prints address of first element of 'a'</code></pre><p>Here, 'a' is an array and it represents 5 elements.</p><p> Somewhere in the memory we have 5 integers side by side but 'a' is just a variable which holds address of the first integer.</p><p>What do we call a variable which holds a memory address? POINTER!</p><p>Yes, an array is technically a pointer. It's a smart application of the concept of pointers.</p></div><div class="box">Let's create an array of integers called 'a':<pre class="language-cpp line-numbers"><code>int a[] = {50, 2000, 1234}</code></pre><p>Let's see what happens when you fiddle with 'a':</p><pre class="language-cpp line-numbers"><code>cout << a; // prints the address of the first element
+cout << *a; // prints the first element, 50
+cout << *(a + 1); // prints the second element, 2000
+cout << *(a + 2); // prints the third element, 1234</code></pre><p>This may help you figure out why the first element of an array always have an index of 0.</p><p>Let's look at the most common way of accessing array elements:</p><pre class="language-cpp line-numbers"><code>cout << a[0]; // prints the first element, 50
+cout << a[1]; // prints the second element, 2000
+cout << a[2]; // prints the third element, 1234</code></pre><p>You may be able to guess how it's all designed now.</p></div><div><h3> 4b. Practical example [Accessing variables outside the scope]</h3></div><div class="box">Take a look at this code:<pre class="language-cpp line-numbers"><code>void increment() {
+	age++; // can't access 'age'
 }
 
-int a = 5;
-increment(a);</code></pre><p>In the memory, we have a variable 
- <u>a</u> 
-which has a value of 
- <u>5</u>.<br>The <u>increment</u> 
-function takes an <b>integer </b>and adds 1 to it (increments it).</p><p>However, the integer <u>a</u> 
-is not changing at all!<br>It's because we have an integer <u>a</u> 
-which equals <u>5</u>. When we passed <u>a</u> 
-to the function <u>increment</u> 
-, we're not passing the variable <u>a</u> 
-but its VALUE only.<br>This is known as <b>pass by value.</b></p><p>During pass by value, here's exactly what happens:<ol><li>The function receives a value and stores that value in a new variable. Here, <u>a</u> 
-is 5. The function receives 5 and stores it in <u>b</u>.</li><li>Next, <u>b</u> 
-is incremented and equals 6.</li></ol></p><p> Summary, we have 2 variables in memory; with values of 5 and 6 respectively.</p><p>Now, this is a real problem and pointers come to the rescue. We'll look that under the next heading.</p></div><div><h3>8. Why do we need pointers? Part 2</h3></div><div class="box">The code below does exactly what we wanted and solves the problem we faced under the previous heading. All we needed to solve it was a little bit of pointers!<pre class="language-cpp line-numbers"><code>void increment (int* b) {
-	*b++; // Increments the value of a.
+int main () {
+	int age = 21;
+
+	increment();
+	
+	cout << age; // still 21
+
+	return 0;
+}</code></pre><p>You can get the idea:<br>Integer 'age' only exists within the function 'main' and cannot be accessed from outside.</p><p>Variables declared within a function belongs to a function; they live and die with the function.</p><p>In other words, 'age' is in the scope of 'main' and cannot be accessed from outside the scope.</p></div><div class="box">But what if you wanted to break the barrier?<p>Surely, you can pass the variable to 'increment':</p><pre class="language-cpp line-numbers"><code>void increment(int age) {
+	age++;
 }
 
-int a = 5;
-increment(&a); // Pass the memory address of 'a' to the function</code></pre>Let's look at what's going on here:<ol><li>Like before, we have an integer <u>a</u> 
-equalling 5.</li><li>But then, we passed the memory address of <u>a</u> 
-to the function.</li><li>The memory address is received by the function and stored in the integer pointer <u>b</u>.</li><li>The pointer is dereferenced to get the memory contents it is pointed to.</li><li>The memory contents are then incremented.</li><li>As a result, the integer <u>a</u> 
-now has a value of 6.</li></ol><p>Here, the pointer <u>b</u> 
-acted as a mirror of integer <u>a</u>.</p></div><script src="js/prism3.js"></script></body></html>
+int main () {
+	int age = 21;
+
+	increment(age);
+	
+	cout << age; // but again, it's still 21
+
+	return 0;
+}</code></pre><p>Nice try but you still failed to break the barrier of scopes.</p><p>All you did was pass the value of age to 'increment.'</p><p>The code below:</p><pre class="language-cpp"><code>increment(age);</code></pre>is equivalent to<pre class="language-cpp"><code>increment(21);</code></pre><p>No wonder why the function, 'increment' can't alter the variable 'age' which belongs to 'main' in any way.</p></div><div class="box">But wait! What if we passed the address of 'age' to 'increment' like this?<pre class="language-cpp line-numbers"><code>increment(&age);</code></pre><p>The function 'increment' could be written like this:</p><pre class="language-cpp line-numbers"><code>void increment(int* age) { // store the memory address in an integer pointer named 'age'
+	(*age)++;
+}</code></pre><p>The overall code would look something like this:</p><pre class="language-cpp line-numbers"><code>void increment(int* age) { // store the memory address in an integer pointer named 'age'
+	(*age)++; // get the contents of the memory and alter it by adding 1 to it
+}
+
+int main () {
+	int age = 21;
+
+	increment(&age); // pass value of the memory address of 'age'
+	
+	cout << age; // prints 21, SOLVED!
+
+	return 0;
+}</code></pre><p>There we have it folks! We broke the barrier of scopes via pointers ;)</p></div><div><h3>4c. Practical example [Swapping variables]</h3></div><div class="box">Yeah! Nothing beats the classic example of swapping variables popular in almost every language.<p>You know it, you got two variables and you want to switch their values.</p><p>So if you have 2 integers with values of 5 and 10 respectively, swapping them would mean switching their values and set them 10 and 5 respectively.</p><pre class="language-cpp line-numbers"><code>void swap (int* a, int* b) {
+	int c = *a; // now, c = 5, a = 5, b = 10
+	*a = *b; // now, a = 10, b = 10, c = 5
+	*b = c; // finally, b = 5, a = 10, c = 5
+}
+
+int main () {
+	int a = 5, b = 10;
+	swap(&a, &b);
+	return 0;
+}</code></pre></div><div><h3>5. Further reading</h3></div><div class="box"><a href="https://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_PointerReference.html" target="__blank">Pointers</a><br><a href="https://www.cs.fsu.edu/~myers/c++/notes/references.html" target="__blank">Pass by reference</a></div><script src="js/prism3.js"></script></body></html>
