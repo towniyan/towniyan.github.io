@@ -27,14 +27,14 @@ cout << sum(a[0][0], a[0][1]);
 cout << sum(a[1][0], a[1][1]);
 cout << average(a[2][0], a[2][1]);
 cout << sum(a[3][0], a[3][1]);
-cout << average(a[4][0], a[4][1]);</code></pre></div><div class="box">But wait? Weren't things better before?<p>Moreover, what if you changed your mind and decided to use 3-4 numbers in each pair?</p><p>Would you go back and change the arguments you pass in each function call?</p><p>That's where object oriented programming comes in the scene!</p></div><div><h3>1. Classes</h3></div><div class="box">Whenever you got variables and functions which are related to one another, it's best to group them together into classes.</div><div class="box">We'll create a class to group the variables and functions we wrote earlier. We'll call this class 'NumberPair.'<pre class="language-cpp line-numbers"><code>class NumberPair {
+cout << average(a[4][0], a[4][1]);</code></pre></div><div class="box">But wait? Weren't things better before?<p>Moreover, what if you changed your mind and decided to use 3-4 numbers in each pair?</p><p>Would you go back and change the arguments you pass in each function call?</p><p>That's where object oriented programming comes in the scene!</p></div><div><h3>1. Creating a class</h3></div><div class="box">Whenever you got variables and functions which are related to one another, it's best to group them together into classes.</div><div class="box">We'll create a class to group the variables and functions we wrote earlier. We'll call this class 'NumberPair.'<pre class="language-cpp line-numbers"><code>class NumberPair {
 
-};</code></pre>Notice how a semicolon is required even after the curly braces. We'll look at why it's required later.</div><div class="box">We'll define two numbers in the class:<pre class="language-cpp line-numbers"><code>class NumberPair {
+};</code></pre>Notice how a semicolon is required even after the curly braces. We'll look at why it's required later.</div><div><h3>2. Defining varibles in the class</h3></div><div class="box">We'll define two numbers in the class:<pre class="language-cpp line-numbers"><code>class NumberPair {
 	int a, b;
-};</code></pre></div><div class="box">Always remember to keep your data private unless you got reasons for not doing so:<pre class="language-cpp line-numbers"><code>class NumberPair {
+};</code></pre></div><div><h3>3. Adding privacy</h3></div><div class="box">Always remember to keep your data private unless you got reasons for not doing so:<pre class="language-cpp line-numbers"><code>class NumberPair {
 private:
 	int a, b;
-};</code></pre>The 'private' label is used for specifying so. If you don't provide any label, it's automatically considered as private though. Adding this label wasn't necessary but still we did it anyway as it's a good practice and makes it more apparent.</div><div class="box">We need to add the functions now, we'll keep them public:<pre class="language-cpp line-numbers"><code>class NumberPair {
+};</code></pre><p>The 'private' label is used for specifying so. If you don't provide any label, it's automatically considered as private though. Adding this label wasn't necessary but still we did it anyway as it's a good practice and makes it more apparent.</p><p>For now, keep in mind that private variables/functions can't be accessed outside of the class.</p></div><div><h3>4. Adding functions to a class</h3></div><div class="box">We need to add the functions now, we'll keep them public:<pre class="language-cpp line-numbers"><code>class NumberPair {
 private:
 	int a, b;
 public:
@@ -45,11 +45,11 @@ public:
 	int average () {
 		return (a + b) / 2;
 	}
-};</code></pre>Note that the arguments weren't necessary as the integers, a and b, were accessible to all functions within the class.</div><div class="box">Alright, so how can we create objects of 'NumberPair'?<pre class="language-cpp line-numbers"><code>NumberPair pair1; // CLASSNAME OBJECTNAME;
+};</code></pre>Note that the arguments weren't necessary as the integers, a and b, were accessible to all functions within the class.</div><div><h3>5. Creating objects out of a class</h3></div><div class="box">Alright, so how can we create objects of 'NumberPair'?<pre class="language-cpp line-numbers"><code>NumberPair pair1; // CLASSNAME OBJECTNAME;
 NumberPair pair2;</code></pre><p>The code above will create two objects 'pair1' and 'pair2' which belongs to the class 'NumberPair.'</p><p>If you didn't get the syntax, here's the generalized version:</p><pre class="language-cpp"><code>CLASSNAME OBJECTNAME;</code></pre><p>Ofc, replace <b>CLASSNAME</b> 
 with the actual class of your class. <b>OBJECTNAME</b> 
-can be any valid name such as 'tuna.'</p></div><div class="box">It's nice and all but how about specifying the numbers when creating the objects?<pre class="language-cpp line-numbers"><code>NumberPair pair1 (5, 10);
-NumberPair pair2 (3, 5);</code></pre>You can use specify the numbers in parenthesis as argument just like you do with functions.</div><div class="box">To receive the arguments, you can use something called a constructor. A constructor is a special function which is called whenever an object is created.<pre class="language-cpp line-numbers"><code>class NumberPair {
+can be any valid name such as 'tuna.'</p></div><div><h3>6. Providing data when creating objects</h3></div><div class="box">It's nice and all but how about specifying the numbers when creating the objects?<pre class="language-cpp line-numbers"><code>NumberPair pair1 (5, 10);
+NumberPair pair2 (3, 5);</code></pre>You can use specify the numbers in parenthesis as argument just like you do with functions.</div><div><h3>7. Creating a constructor</h3></div><div class="box">To receive the arguments, you can use something called a constructor. A constructor is a special function which is called whenever an object is created.<pre class="language-cpp line-numbers"><code>class NumberPair {
 private:
 	int a, b;
 public:
@@ -67,7 +67,7 @@ public:
 	int average () {
 		return (a + b) / 2;
 	}
-};</code></pre><p>Note that the name of the constructor is exactly same as the class name. Your compiler is smart enough to identify the constructor as a function which has the same name as the class name.</p><p>Note that constructors cannot return anything, thus return type shouldn't be specified, not even 'void.'</p><p>Here, the constructor just simply sets the values of 'a' and 'b' to the values provided when objects are made out of the class.</p></div><div class="box">Putting it all together, this is how it works:<pre class="language-cpp line-numbers"><code>NumberPair a(10, 5), b(3, 5); // 2 objects are created, a and b respectively
+};</code></pre><p>Note that the name of the constructor is exactly same as the class name. Your compiler is smart enough to identify the constructor as a function which has the same name as the class name.</p><p>Note that constructors cannot return anything, thus return type shouldn't be specified, not even 'void.'</p><p>Here, the constructor just simply sets the values of 'a' and 'b' to the values provided when objects are made out of the class.</p></div><div><h3>8. Fiddling with objects</h3></div><div class="box">Putting it all together, this is how it works:<pre class="language-cpp line-numbers"><code>NumberPair a(10, 5), b(3, 5); // 2 objects are created, a and b respectively
 cout << a.sum(); // 15
 cout << b.average(); // 4
 cout << b.sum(); // 8</code></pre><p>No longer a dirty mess!</p></div><script src="js/prism3.js"></script></body></html>
