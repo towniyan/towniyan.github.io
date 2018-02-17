@@ -62,8 +62,15 @@ nav.main-menu a.selected {
 	color: #4286f4;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	body > div {
 		margin: 1em;
+	}
+
+	nav.main-menu {
+		flex-direction: column;
+	}
+	nav.main-menu a {
+		margin-bottom: 0.5em;
 	}
 }

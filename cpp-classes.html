@@ -1,0 +1,73 @@
+<!DOCTYPE html><html><head><title>C++ Classes</title><link rel="stylesheet" href="css/base.css"><link href="css/prism3.css" rel="stylesheet"></head><body><div><nav class="main-menu"><a href="index.html">Contents</a><a href="html-basics.html">HTML - Basics</a><a href="flexbox-intro.html">Flexbox - Intro</a><a href="flexbox-row.html">Flexbox - Row</a><a href="flexbox-col.html">Flexbox - Column</a><a href="flexbox-application.html">Flexbox - Application</a><a href="cpp-pointers.html">C++ Pointers</a><a class="selected" href="cpp-classes.html">C++ Classes</a><a href="cmd-basics.html">CMD - Basics</a></nav></div><h1><center>C++ Classes</center></h1><div><h3>0. Introduction</h3></div><div class="box">Let's imagine you've 2 numbers.<pre class="language-cpp"><code>int a = 5, b = 10;</code></pre></div><div class="box">And maybe you want a function to calculate their sum?<pre class="language-cpp line-numbers"><code>int sum (int a, int b) {
+	return a + b;
+}</code></pre></div><div class="box">How about another function to calculate their average?<pre class="language-cpp line-numbers"><code>int average (int a, int b) {
+	return (a + b) / 2;
+}</code></pre></div><div class="box">Let's try them out!<pre class="language-cpp line-numbers"><code>int a = 5, b = 10;
+
+cout << sum(a, b); // prints 15
+cout << average(a, b); // prints 7</code></pre></div><div class="box">This is nice and all but what if you to work with 4 more pairs like this?<pre class="language-cpp line-numbers"><code>int a = 5, b = 10;
+int c = 13, d = 76;
+int e = 54, f = 14;
+int g = 12, h = 5;
+int i = 87, j = 2;
+
+cout << sum(a, b);
+cout << sum(c, d);
+cout << average(e, f);
+cout << sum(g, h);
+cout << average(i, j);</code></pre></div><div class="box">As things get a bit messy, you plan to use an array.<pre class="language-cpp line-numbers"><code>int number_pairs[5][2] = {
+	{5, 10},
+	{13, 76},
+	{54, 14},
+	{12, 5},
+	{87, 2}
+};
+
+cout << sum(a[0][0], a[0][1]);
+cout << sum(a[1][0], a[1][1]);
+cout << average(a[2][0], a[2][1]);
+cout << sum(a[3][0], a[3][1]);
+cout << average(a[4][0], a[4][1]);</code></pre></div><div class="box">But wait? Weren't things better before?<p>Moreover, what if you changed your mind and decided to use 3-4 numbers in each pair?</p><p>Would you go back and change the arguments you pass in each function call?</p><p>That's where object oriented programming comes in the scene!</p></div><div><h3>1. Classes</h3></div><div class="box">Whenever you got variables and functions which are related to one another, it's best to group them together into classes.</div><div class="box">We'll create a class to group the variables and functions we wrote earlier. We'll call this class 'NumberPair.'<pre class="language-cpp line-numbers"><code>class NumberPair {
+
+};</code></pre>Notice how a semicolon is required even after the curly braces. We'll look at why it's required later.</div><div class="box">We'll define two numbers in the class:<pre class="language-cpp line-numbers"><code>class NumberPair {
+	int a, b;
+};</code></pre></div><div class="box">Always remember to keep your data private unless you got reasons for not doing so:<pre class="language-cpp line-numbers"><code>class NumberPair {
+private:
+	int a, b;
+};</code></pre>The 'private' label is used for specifying so. If you don't provide any label, it's automatically considered as private though. Adding this label wasn't necessary but still we did it anyway as it's a good practice and makes it more apparent.</div><div class="box">We need to add the functions now, we'll keep them public:<pre class="language-cpp line-numbers"><code>class NumberPair {
+private:
+	int a, b;
+public:
+	int sum () {
+		return a + b;
+	}
+
+	int average () {
+		return (a + b) / 2;
+	}
+};</code></pre>Note that the arguments weren't necessary as the integers, a and b, were accessible to all functions within the class.</div><div class="box">Alright, so how can we create objects of 'NumberPair'?<pre class="language-cpp line-numbers"><code>NumberPair pair1; // CLASSNAME OBJECTNAME;
+NumberPair pair2;</code></pre><p>The code above will create two objects 'pair1' and 'pair2' which belongs to the class 'NumberPair.'</p><p>If you didn't get the syntax, here's the generalized version:</p><pre class="language-cpp"><code>CLASSNAME OBJECTNAME;</code></pre><p>Ofc, replace <b>CLASSNAME</b> 
+with the actual class of your class. <b>OBJECTNAME</b> 
+can be any valid name such as 'tuna.'</p></div><div class="box">It's nice and all but how about specifying the numbers when creating the objects?<pre class="language-cpp line-numbers"><code>NumberPair pair1 (5, 10);
+NumberPair pair2 (3, 5);</code></pre>You can use specify the numbers in parenthesis as argument just like you do with functions.</div><div class="box">To receive the arguments, you can use something called a constructor. A constructor is a special function which is called whenever an object is created.<pre class="language-cpp line-numbers"><code>class NumberPair {
+private:
+	int a, b;
+public:
+	// CONSTRUCTOR
+	NumberPair (int num1, int num2) {
+		// receive the numbers and set them to the class variables
+		a = num1;
+		b = num2;
+	}
+
+	int sum () {
+		return a + b;
+	}
+
+	int average () {
+		return (a + b) / 2;
+	}
+};</code></pre><p>Note that the name of the constructor is exactly same as the class name. Your compiler is smart enough to identify the constructor as a function which has the same name as the class name.</p><p>Note that constructors cannot return anything, thus return type shouldn't be specified, not even 'void.'</p><p>Here, the constructor just simply sets the values of 'a' and 'b' to the values provided when objects are made out of the class.</p></div><div class="box">Putting it all together, this is how it works:<pre class="language-cpp line-numbers"><code>NumberPair a(10, 5), b(3, 5); // 2 objects are created, a and b respectively
+cout << a.sum(); // 15
+cout << b.average(); // 4
+cout << b.sum(); // 8</code></pre><p>No longer a dirty mess!</p></div><script src="js/prism3.js"></script></body></html>
